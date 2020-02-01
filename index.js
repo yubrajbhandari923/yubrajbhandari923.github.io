@@ -27,6 +27,19 @@ $().ready(() => {
         
     }
     
+
+    $(".slides__photo").click(function (e) { 
+        e.preventDefault();
+        $(".slides__photo").css("z-index", 6)
+        $(this).css("z-index",8)
+    });
+    $(".slides__navButton").click(function (e) { 
+        e.preventDefault();
+        console.log("hj")
+        let id = $(this).attr("id");
+        let transform = $(".slides__textHero").css("transform");
+        
+    });
     
     
 })

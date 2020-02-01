@@ -373,8 +373,20 @@ transition: 2s;
     max-width: 300px ;
     display: flex;
     flex-direction: column;
-    padding: 20px ;
+    padding: 0px ;
     margin-right: 200px ;
+    overflow:hidden;
+}
+.slides__textHero{
+    width:100%;
+    position: relative;
+    display: flex;
+    transform: translateX(-000%);
+}
+
+.slides__text{
+    flex-basis: 100% !important;
+   min-width:100%;
 }
 .slides__headerText{ 
     font: 45px montserrat;
@@ -422,9 +434,14 @@ transition: 2s;
 .slides__horPhoto, .slides__verPhoto {
     display:flex;
     overflow: hidden;
+    cursor: pointer;
+    box-shadow: 40px 20px 10px 0 rgba(0,0,0,0.09);
 }
-.slides__horPhoto:hover, .slides__verPhoto:hover{
-    z-index:8;
+.slides__horPhoto:hover {
+    z-index:9;
+}
+ .slides__verPhoto:hover{
+    z-index:9;
 }
 .slides__bgShade {
     grid-area: 3 / 2 / 6 / 5;
