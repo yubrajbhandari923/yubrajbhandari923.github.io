@@ -4,7 +4,7 @@
     /* variables */
     --c6 : #7fb069;
     --c10 : #fffbbd ;
-    --c9 : #363020;
+    --c9 :#191919;
     --c8 : #ca3c25 ; 
     --c7 : #b5cbb7 ; 
     --c1 : #eae0cc;
@@ -270,60 +270,63 @@ transition: 2s;
 /* _____________________________________________________________ */
 .photoSlider{
     width:100vw;
-    margin-left:0;
-    margin-top: 0;
+    height: max-content;
     position: relative;
-}
-.photoSlider__textBoxContainer{
-    float: right;
-    position: absolute;
+    display: flex;
+    z-index: -2;
     background: var(--c3);
+}
+ .photoSlider__textBoxContainer{
+    float: right;
+    position: fixed;
     width:500px;
     height:100vh;
     top:0 ;
     right: 0;
-    z-index: -2;
+    z-index: -1;
     padding: 0px;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
+
 .s2 .photoSlider__textBoxContainer{
-    float:left;
     left:0 !important;
-    background: var(--c6);
-}
+    z-index: -3 !important;
+} 
 .photoSlider__photos{
     width:max-content;
     display: grid ;
     grid-template-rows: auto ;
-    box-shadow: -10px 0 10px 0px rgba(0,0,0,0.2), 10px 0px 10px 0px rgba(0,0,0,0.2);
 }
+
 .s2{
-    z-index: -1;
+    background: var(--c2) !important;
 }
 .s2 .photoSlider__photos{
     float:right;
+    margin-left: auto;
 }
 .photoSlider__photos img{
-    width:calc(100vw - 500px);
-    height: 100vh;
-    object-fit: cover;
+    width: 500px;
+    box-shadow: -10px 0 10px 0px rgba(0,0,0,0.2), 10px 0px 10px 0px rgba(0,0,0,0.2);
 }
+
 .textBoxContainer__header{
     font: 35px montserrat, sans-serif ;
-    color: var(--c9);
+    color: black;
     font-weight: bolder;
     margin:30px 0;
     display: none;
     position: relative;
 }
+
 .textBoxContainer__header:after{
     position: absolute;
     content: "";
     width:calc(100% + 30px) ;
     height:3px;
-    background: var(--c9);
+    background-color: black;
     bottom: -10px;
     left:0 ;
 }
@@ -334,9 +337,20 @@ transition: 2s;
     margin:50px 0;
     display: none;
 }
+.s2 .textBoxContainer__header, .s2 .textBoxContainer__textBox{
+    color: white;
+}
+.s2 .textBoxContainer__header:after {
+    background: white;
+}
 .photoSlider__textBoxContainer__content{   
     margin: 100px 50px;
 }
 .photoBox {
+    display:grid;
+    justify-content: center;
+    align-items: center;
+    width:calc(100vw - 500px);
+    height: 100vh;
     position: relative;
-}
+} */

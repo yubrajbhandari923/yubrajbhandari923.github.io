@@ -38,12 +38,16 @@ window.onscroll = () => {
         document.querySelector("header").classList.remove("header--scroll");
     
     }
-    if(document.documentElement.scrollTop > document.querySelector(".photoSlider").offsetTop - 200  ){
+    if(document.documentElement.scrollTop > document.querySelector(".photoSlider").offsetTop - 200 ){
         // node.classList.remove(clsOut)
-        document.querySelectorAll(".photoSlider__textBoxContainer")[0].style.position = "fixed";
-        document.querySelectorAll(".photoSlider__textBoxContainer")[1].style.position = "fixed";
+        // document.querySelectorAll(".photoSlider__textBoxContainer")[0].style.position = "fixed";
+        // document.querySelectorAll(".photoSlider__textBoxContainer")[1].style.position = "fixed";
         photoSlider();
-    }
+     } 
+     //else {
+    //     document.querySelectorAll(".photoSlider__textBoxContainer")[0].style.position = "absolute";
+    //     document.querySelectorAll(".photoSlider__textBoxContainer")[1].style.position = "absolute";
+    // }
     setTimeout(animateOnScroll(".placesBox__text__header", ".placesBox")  ,500)
     setTimeout(animateOnScroll(".placesBox__text__content", ".placesBox") ,5000)
     setTimeout(animateOnScroll(".placesBox__cubeContainer", ".placesBox") ,30000)
